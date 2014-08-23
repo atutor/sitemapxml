@@ -1,2 +1,22 @@
 ## ATutor XML Sitemap Module
 
+This simple module generates a standardized XML sitemap that can be submitted to various search engines to provide more efficient indexing of the content within PUBLIC ATutor courses. 
+
+## HOW To Use
+Once installed, open the mods/sitemapxml/sitemap.php file and add the course ids in the $courses_sitemap array
+
+For example:
+$courses_sitemap = array(5, 13);  //where 5 and 13 are the ids of public courses to be indexed
+
+The open the sitemap file in a Web browser to see the result. 
+http://mysite.com/ATutor/mods/sitemapxml/sitemap.php
+
+If you see a series of XML blocks something like the following, that includes URLs to all the content pages of the courses specified in the $courses_sitemap array, the sitemap URL should be ready to submit to search engines.
+
+<url>
+<loc>https://mysite.com/ATutor/content.php?cid=668</loc>
+<lastmod>2014-06-14</lastmod>
+<changefreq>weekly</changefreq>
+</url>
+
+
